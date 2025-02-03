@@ -1,0 +1,88 @@
+.navbar {
+    background-color: #ffffff;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Limit width for consistency with other sections */
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    text-decoration: none; /* Remove underline from link */
+  }
+  
+  .logo-image {
+    width: 75px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the logo circular <button class="citation-flag" data-index="1"> */
+    transition: transform 0.3s ease-in-out; /* Add hover animation */
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover for interactivity */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Add hover effect for links */
+  }
+  
+  .auth-buttons button {
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-buttons .sign-up-button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .auth-buttons .sign-up-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .logo-image {
+      width: 80px; /* Reduce logo size on smaller screens */
+    }
+  
+    .nav-links {
+      gap: 1rem; /* Reduce spacing between links on smaller screens */
+    }
+  }
