@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation <button class="citation-flag" data-index="3">
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -6,37 +7,41 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         {/* Logo */}
-        <a href="/" className="logo" aria-label="TobiFrontend Logo">
+        <Link to="/" className="logo" aria-label="TobiFrontend Logo">
           <img
-            src="https://i.ibb.co/kgb8ngMP/Logo.png" // Updated logo URL <button class="citation-flag" data-index="1">
+            src="https://i.ibb.co/kgb8ngMP/Logo.png" // Updated logo URL
             alt="TobiFrontend Logo"
             className="logo-image circular-logo"
           />
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="nav-links">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/about">About Us</a>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="/private-members">Private Members</a>
+            <Link to="/private-members">Private Members</Link>
           </li>
           <li>
-            <a href="/investor-portal">Investor Portal</a>
+            <Link to="/investor-portal">Investor Portal</Link>
           </li>
         </ul>
 
         {/* Authentication Buttons */}
         <div className="auth-buttons">
-          <button>Sign In</button>
-          <button className="sign-up-button">Register</button>
+          <Link to="/sign-in">
+            <button>Sign In</button>
+          </Link>
+          <Link to="/register">
+            <button className="sign-up-button">Register</button>
+          </Link>
         </div>
       </div>
     </nav>

@@ -1,0 +1,213 @@
+/* Register Container */
+.register-container {
+    background-color: #f9f9f9; /* Slightly off-white background */
+    min-height: calc(100vh - 80px); /* Subtract Navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif; /* Match the font type used in the navbar <button class="citation-flag" data-index="3"> */
+    padding-top: 10rem; /* Increased spacing to avoid overlap with Navbar */
+  }
+  
+  .register-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0a0a0a;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-input {
+    padding: 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight input field on focus */
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .sign-up-button {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .sign-up-button:hover {
+    background-color: #303030;
+  }
+  
+  .social-login {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .social-login p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .social-icon svg {
+    font-size: 1.2rem;
+  }
+  
+  .sign-in-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .login-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Register Button */
+  .register-button {
+    background-color: #0a0a0a; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 0.75rem; /* Consistent padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Standard font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .register-button:hover {
+    background-color: #303030; /* Slightly lighter dark color on hover */
+  }
+  
+  /* Register Footer */
+  .register-footer {
+    margin-top: auto;
+    padding: 1rem; /* Reduced padding for a more compact footer */
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #d0d0d0;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem; /* Reduced spacing */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.25rem; /* Reduced spacing */
+  }
+  
+  .footer-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 0.8rem; /* Reduced font size */
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /* Reduced gap between icons */
+  }
+  
+  .social-media-icon {
+    background: none;
+    border: none;
+    font-size: 1.2rem; /* Reduced icon size */
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-media-icon:hover {
+    color: #0056b3;
+  }

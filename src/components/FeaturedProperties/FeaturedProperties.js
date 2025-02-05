@@ -1,82 +1,81 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation <button class="citation-flag" data-index="3">
 import "./FeaturedProperties.css";
-
-const PropertyCard = ({ name, location, price, rating, imageUrl }) => {
-  return (
-    <div className="property-card">
-      <img className="property-image" src={imageUrl} alt={name} loading="lazy" />
-      <div className="property-details">
-        <h3 className="property-title">{name}</h3>
-        <p className="property-location">{location}</p>
-        <p className="property-price">{price}</p>
-        <div className="property-rating">{rating}</div>
-      </div>
-      <button className="view-details-button">View Details</button>
-    </div>
-  );
-};
 
 const FeaturedProperties = () => {
   const properties = [
     {
       id: 1,
-      name: "Luxury Apartment in Ikoyi",
-      location: "Ikoyi, Lagos",
-      price: "$150",
-      rating: "★ 4.7 (200 reviews)",
-      imageUrl: "https://i.ibb.co/Y467Cvc2/room6.png"
+      image: "https://i.ibb.co/N2VRXb4Y/Anaconda-Cut-1-Bedroom-Apartment.png",
+      title: "Luxury Studio Apartment",
+      location: "Ikoyi",
+      price: 250,
+      type: "1-Bed Apartment",
     },
     {
       id: 2,
-      name: "Penthouse in Victoria Island",
-      location: "Victoria Island, Lagos",
-      price: "$150",
-      rating: "★ 4.7 (150 reviews)",
-      imageUrl: "https://i.ibb.co/vvXy57h6/room4.png"
+      image: "https://i.ibb.co/vvXy57h6/room4.png",
+      title: "Modern Studio Apartment",
+      location: "Victoria Island",
+      price: 300,
+      type: "1-Bed Apartment",
     },
     {
       id: 3,
-      name: "Beach View Villa",
-      location: "Lekki, Lagos",
-      price: "$150",
-      rating: "★ 4.8 (100 reviews)",
-      imageUrl: "https://i.ibb.co/F46z2M9q/room5.png"
+      image: "https://i.ibb.co/F46z2M9q/room5.png",
+      title: "Beachfront Studio Apartment",
+      location: "Ikoyi",
+      price: 350,
+      type: "1-Bed Apartment",
     },
     {
       id: 4,
-      name: "Island Oasis Villa",
-      location: "Victoria Island, Lagos",
-      price: "$150",
-      rating: "★ 4.6 (120 reviews)",
-      imageUrl: "https://i.ibb.co/5XV69Tm6/room3.png"
+      image: "https://i.ibb.co/5XV69Tm6/room3.png",
+      title: "Cozy Studio Apartment",
+      location: "Victoria Island",
+      price: 200,
+      type: "1-Bed Apartment",
     },
     {
       id: 5,
-      name: "Parkview Estate",
-      location: "Ikoyi, Lagos",
-      price: "$150",
-      rating: "★ 4.9 (80 reviews)",
-      imageUrl: "https://i.ibb.co/MxdXJRt5/apt2.png"
+      image: "https://i.ibb.co/MxdXJRt5/apt2.png",
+      title: "Spacious Studio Apartment",
+      location: "Ikoyi",
+      price: 320,
+      type: "1-Bed Apartment",
     },
     {
       id: 6,
-      name: "Lagoon View Manor",
-      location: "Ikoyi, Lagos",
-      price: "$150",
-      rating: "★ 4.8 (150 reviews)",
-      imageUrl: "https://i.ibb.co/8DnZMcWq/apartment1.png"
-    }
+      image: "https://i.ibb.co/8DnZMcWq/apartment1.png",
+      title: "Elegant Studio Apartment",
+      location: "Victoria Island",
+      price: 340,
+      type: "1-Bed Apartment",
+    },
   ];
 
   return (
-    <section className="featured-properties">
-      <h2 className="section-title">Featured Properties</h2>
-      <div className="property-grid">
-        {properties.map((property) => (
-          <PropertyCard key={property.id} {...property} />
-        ))}
-      </div>
-    </section>
+    <div className="property-grid">
+      {properties.map((property) => (
+        <div key={property.id} className="property-card">
+          {/* Property Image */}
+          <div className="property-image">
+            <img src={property.image} alt={property.title} />
+          </div>
+
+          {/* Property Details */}
+          <div className="property-details">
+            <h3 className="property-title">{property.title}</h3>
+            <p className="property-location">{property.location}</p>
+            <p className="property-price">${property.price}/night</p>
+            <p className="property-type">{property.type}</p>
+            <Link to={`/property/${property.id}`}>
+              <button className="view-details-button">View Details</button>
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -1,17 +1,20 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import FeaturedProperties from "../../components/FeaturedProperties/FeaturedProperties";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer"; // Import the Footer component
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <>
+      {/* Hero Section */}
       <Hero />
+
+      {/* Featured Properties Section */}
       <FeaturedProperties />
+
+      {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 };
 

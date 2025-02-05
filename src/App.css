@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+/* Hero Section */
+.hero-section {
+  padding: 3rem 8rem; /* Padding for hero section */
+  background-color: #f9f9f9; /* Example background color */
+  text-align: left; /* Adjust alignment if needed */
+}
+
+/* Featured Properties Section */
+.featured-properties-section {
+  padding: 3rem 0; /* Padding above and below the grid */
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 8rem; /* Padding for footer */
+  margin-top: 3rem; /* Space between grid and footer */
+  background-color: #282c34; /* Example footer background color */
+  color: white; /* Example footer text color */
+  text-align: center; /* Center-align footer content */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
