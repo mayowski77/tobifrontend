@@ -151,6 +151,7 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 0.5rem; /* Reduced spacing */
+  padding-left: 2rem; /* Add padding to shift content to the right */
 }
 
 .footer-links ul {
@@ -160,6 +161,7 @@
 
 .footer-links li {
   margin-bottom: 0.25rem; /* Reduced spacing */
+  text-align: left; /* Align text to the left */
 }
 
 .footer-link {

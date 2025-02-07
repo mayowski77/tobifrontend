@@ -5,6 +5,11 @@ import "./SignIn.css";
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
+  // Function to handle navigation
+  const handleNavigation = (url) => {
+    window.location.href = url; // Redirect to the specified URL
+  };
+
   return (
     <div className="sign-in-container">
       {/* Main Sign-In Form */}
@@ -54,7 +59,13 @@ const SignIn = () => {
         {/* Register Link */}
         <p className="register-link">
           Don't have an account?{" "}
-          <button className="login-link">Register here</button>
+          <button
+            className="login-link"
+            aria-label="Register for a new account"
+            onClick={() => handleNavigation("/register")}
+          >
+            Register here
+          </button>
         </p>
       </div>
       {/* Sign-In Footer */}
@@ -62,24 +73,56 @@ const SignIn = () => {
         <div className="footer-links">
           <ul>
             <li>
-              <button className="footer-link">FAQs</button>
+              <button
+                className="footer-link"
+                aria-label="Frequently Asked Questions"
+                onClick={() => handleNavigation("/faqs")}
+              >
+                FAQs
+              </button>
             </li>
             <li>
-              <button className="footer-link">Contact</button>
+              <button
+                className="footer-link"
+                aria-label="Contact Us"
+                onClick={() => handleNavigation("/contact")}
+              >
+                Contact
+              </button>
             </li>
             <li>
-              <button className="footer-link">Privacy Policy</button>
+              <button
+                className="footer-link"
+                aria-label="Privacy Policy"
+                onClick={() => handleNavigation("/privacy-policy")}
+              >
+                Privacy Policy
+              </button>
             </li>
             <li>
-              <button className="footer-link">Terms & Conditions</button>
+              <button
+                className="footer-link"
+                aria-label="Terms and Conditions"
+                onClick={() => handleNavigation("/terms")}
+              >
+                Terms & Conditions
+              </button>
             </li>
           </ul>
         </div>
         <div className="social-media-icons">
-          <button className="social-media-icon x-twitter">
+          <button
+            className="social-media-icon x-twitter"
+            aria-label="Follow us on X (formerly Twitter)"
+            onClick={() => window.open("https://twitter.com", "_blank")}
+          >
             <FaXTwitter /> {/* Updated Twitter icon */}
           </button>
-          <button className="social-media-icon facebook">
+          <button
+            className="social-media-icon facebook"
+            aria-label="Follow us on Facebook"
+            onClick={() => window.open("https://facebook.com", "_blank")}
+          >
             <FaFacebook />
           </button>
         </div>
