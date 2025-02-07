@@ -1,9 +1,9 @@
 /* Footer */
 .footer {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: #1a1a1a; /* Darker background for better contrast */
+  color: #ffffff; /* Default text color */
   padding: 4rem 0;
-  font-family: 'Arial', sans-serif; /* Match the font type used in the navbar <button class="citation-flag" data-index="3"> */
+  font-family: 'Arial', sans-serif; /* Match the font type used in the navbar */
 }
 
 .footer-container {
@@ -34,18 +34,13 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  color: #ffffff; /* Ensure heading is visible */
 }
 
 .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
@@ -53,18 +48,15 @@
 }
 
 .footer-link {
-  background: none;
-  border: none;
-  color: #007bff;
-  font-size: 0.9rem;
-  cursor: pointer;
+  color: #0056b3; /* Light purple for default link color */
   text-decoration: none;
-  padding: 0;
+  font-size: 0.9rem;
   transition: color 0.3s ease-in-out;
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: #ffffff; /* White text on hover */
+  opacity: 0.8; /* Slightly reduce opacity for a subtle hover effect */
 }
 
 .newsletter-form {
@@ -74,39 +66,40 @@
 }
 
 .newsletter-input {
-  padding: 0.5rem; /* Reduced padding for a smaller input field */
+  padding: 0.75rem; /* Slightly increased padding for better usability */
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem; /* Slightly smaller font size */
+  font-size: 1rem; /* Consistent font size */
   background-color: #ffffff;
-  color: #0a0a0a;
+  color: #1a1a1a;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .newsletter-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #007bff; /* Add visible focus state for accessibility <button class="citation-flag" data-index="7"> */
+  box-shadow: 0 0 0 2px #bb86fc; /* Add visible focus state for accessibility */
 }
 
+/* Newsletter Button */
 .newsletter-button {
-  padding: 0.5rem; /* Reduced padding for a smaller button */
-  background-color: #007bff;
-  color: #ffffff;
+  padding: 0.75rem; /* Slightly increased padding for better usability */
+  background-color: #0056b3; /* Default button color */
+  color: #ffffff; /* White text for contrast */
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem; /* Slightly smaller font size */
-  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem; /* Consistent font size */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .newsletter-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #003f7f; /* Darker blue on hover */
 }
 
 .footer-bottom {
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #aaa; /* Light gray for copyright text */
   padding-top: 1rem;
   border-top: 1px solid #333;
 }

@@ -8,22 +8,22 @@ const Footer = () => {
         <div className="footer-content">
           {/* Quick Links Section */}
           <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul className="footer-links">
-              <li>
-                <button className="footer-link">Home</button>
-              </li>
-              <li>
-                <button className="footer-link">Properties</button>
-              </li>
-              <li>
-                <button className="footer-link">Contact</button>
-              </li>
-              <li>
-                <button className="footer-link">Terms & Conditions</button>
-              </li>
-            </ul>
-          </div>
+  <h4>Useful Links</h4>
+  <ul className="footer-links">
+    <li>
+      <a href="/about" className="footer-link">About Us</a>
+    </li>
+    <li>
+      <a href="/faq" className="footer-link">FAQs</a>
+    </li>
+    <li>
+      <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
+    </li>
+    <li>
+      <a href="/contact-us" className="footer-link">Contact Us</a>
+    </li>
+  </ul>
+</div>
 
           {/* Newsletter Subscription Section */}
           <div className="footer-section newsletter-section">
@@ -33,6 +33,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="newsletter-input"
+                aria-label="Subscribe to our newsletter"
               />
               <button className="newsletter-button">Subscribe</button>
             </div>

@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation <button class="citation-flag" data-index="3">
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "./FeaturedProperties.css";
 
 const FeaturedProperties = () => {
   const properties = [
     {
       id: 1,
-      image: "https://i.ibb.co/N2VRXb4Y/Anaconda-Cut-1-Bedroom-Apartment.png",
+      image: "https://i.postimg.cc/gkztrPcZ/room10.png",
       title: "Luxury Studio Apartment",
       location: "Ikoyi",
       price: 250,
@@ -14,7 +14,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 2,
-      image: "https://i.ibb.co/vvXy57h6/room4.png",
+      image: "https://i.postimg.cc/jqQksjTT/room11.png",
       title: "Modern Studio Apartment",
       location: "Victoria Island",
       price: 300,
@@ -22,7 +22,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 3,
-      image: "https://i.ibb.co/F46z2M9q/room5.png",
+      image: "https://i.postimg.cc/RVgsHbqb/room8.png",
       title: "Beachfront Studio Apartment",
       location: "Ikoyi",
       price: 350,
@@ -30,7 +30,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 4,
-      image: "https://i.ibb.co/5XV69Tm6/room3.png",
+      image: "https://i.postimg.cc/9Qzxtt7X/room9.png",
       title: "Cozy Studio Apartment",
       location: "Victoria Island",
       price: 200,
@@ -38,7 +38,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 5,
-      image: "https://i.ibb.co/MxdXJRt5/apt2.png",
+      image: "https://i.postimg.cc/rmZvft3k/room7.png",
       title: "Spacious Studio Apartment",
       location: "Ikoyi",
       price: 320,
@@ -46,7 +46,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 6,
-      image: "https://i.ibb.co/8DnZMcWq/apartment1.png",
+      image: "https://i.postimg.cc/sXgkPJnm/room5.png",
       title: "Elegant Studio Apartment",
       location: "Victoria Island",
       price: 340,
@@ -62,18 +62,22 @@ const FeaturedProperties = () => {
           <div className="property-image">
             <img src={property.image} alt={property.title} />
           </div>
-
           {/* Property Details */}
           <div className="property-details">
             <h3 className="property-title">{property.title}</h3>
             <p className="property-location">{property.location}</p>
             <p className="property-price">${property.price}/night</p>
             <p className="property-type">{property.type}</p>
-            <Link to={`/property/${property.id}`}>
+            {/* Use a button styled as a link */}
+            <Link to={`/property/${property.id}`} aria-label={`View details for ${property.title}`}>
               <button className="view-details-button">View Details</button>
             </Link>
           </div>
         </div>
+      ))}
+      {/* Empty placeholders for missing grid items */}
+      {[...Array(3)].map((_, index) => (
+        <div key={`placeholder-${index}`} className="property-card placeholder"></div>
       ))}
     </div>
   );

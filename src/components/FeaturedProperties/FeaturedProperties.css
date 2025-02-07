@@ -1,11 +1,13 @@
 /* Property Grid */
 .property-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  grid-template-columns: repeat(3, 1fr); /* Three columns for the 3x3 grid */
+  grid-template-rows: repeat(3, auto); /* Three rows for the 3x3 grid */
   gap: 2rem; /* Consistent spacing between cards */
-  padding: 0 8rem; /* Horizontal padding */
-  margin-top: 10rem; /* Space between hero section and grid */
-  margin-bottom: 10rem; /* Space between grid and footer */
+  padding: 2rem 4rem; /* Increased horizontal padding */
+  margin-top: 4rem; /* Space between hero section and grid */
+  margin-bottom: 4rem; /* Space between grid and footer */
+  justify-content: center; /* Center the grid items */
 }
 
 /* Property Card */
@@ -14,6 +16,9 @@
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 400px; /* Increased width for slightly wider cards */
+  margin: 0 auto; /* Center cards within the grid */
+  width: 100%; /* Ensure cards take full width of their grid cell */
 }
 
 .property-card:hover {
@@ -21,10 +26,16 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .property-card:hover {
+    transform: none; /* Disable hover animation for users who prefer reduced motion */
+  }
+}
+
 /* Property Image */
 .property-image {
   width: 100%;
-  height: 170px; /* Reduced height for smaller cards */
+  height: 220px; /* Slightly increased height for better visuals */
   background-color: #ddd;
   border-radius: 16px 16px 0 0;
   display: flex;
@@ -46,7 +57,7 @@
 }
 
 .property-title {
-  font-size: 1.2rem; /* Smaller font size */
+  font-size: 1.2rem; /* Slightly larger font size for better readability */
   font-weight: 700;
   color: #222;
   margin: 0.5rem 0;
@@ -56,21 +67,21 @@
 }
 
 .property-location {
-  font-size: 0.9rem; /* Smaller font size */
+  font-size: 1rem; /* Increased font size for consistency */
   font-weight: 500;
   color: #606060;
   margin-bottom: 0.3rem;
 }
 
 .property-price {
-  font-size: 0.9rem; /* Smaller font size */
+  font-size: 1rem; /* Increased font size for consistency */
   font-weight: 500;
-  color: #000; /* Black text color */
+  color: #000;
   margin-bottom: 0.3rem;
 }
 
 .property-type {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #606060;
   margin-bottom: 0.5rem;
@@ -80,15 +91,31 @@
 .view-details-button {
   background-color: #0a0a0a;
   color: #ffffff;
-  padding: 0.75rem; /* Reduced padding for smaller button */
+  padding: 0.75rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem; /* Smaller font size */
+  font-size: 1rem;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .view-details-button:hover {
   background-color: #303030;
+}
+
+.view-details-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #bb86fc; /* Add visible focus state for accessibility */
+}
+
+/* Placeholder Styling */
+.placeholder {
+  visibility: hidden; /* Hide the placeholder content */
+  border: none; /* Remove borders */
+  background: transparent; /* Transparent background */
+  pointer-events: none; /* Disable interactivity */
+  max-width: 400px; /* Match the width of property cards */
+  margin: 0 auto; /* Center placeholders within the grid */
+  width: 100%; /* Ensure placeholders take full width of their grid cell */
 }
